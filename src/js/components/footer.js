@@ -59,8 +59,10 @@ export const Footer = () => /* html*/ `
     <div
       class="flex justify-between font-bold text-lg flex-col gap-8 md:flex-row md:gap-0"
     >
+    <a href="/">
       <img class="w-16 h-14" src="./logo.png" alt="logo" />
 
+    </a>
     ${FooterLinks({ links: linksColumn1 })}
     ${FooterLinks({ links: linksColumn2 })}
      
@@ -68,7 +70,7 @@ export const Footer = () => /* html*/ `
     <div class="flex mt-6 space-x-6 justify-center">
       <a
         href="#"
-        class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+        class="text-gray-500 hover:text-gray-900"
       >
         <svg
           class="w-5 h-5"
@@ -85,7 +87,7 @@ export const Footer = () => /* html*/ `
       </a>
       <a
         href="#"
-        class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+        class="text-gray-500 hover:text-gray-900"
       >
         <svg
           class="w-5 h-5"
@@ -102,7 +104,7 @@ export const Footer = () => /* html*/ `
       </a>
       <a
         href="#"
-        class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+        class="text-gray-500 hover:text-gray-900"
       >
         <svg
           class="w-5 h-5"

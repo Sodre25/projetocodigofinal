@@ -1,13 +1,32 @@
 import "flowbite";
-import { Footer } from "./components/footer.js";
-import { Header } from "./components/header.js";
-import { NewArrivals } from "./components/new-arrivals.js";
+import { commonLoader } from "./loaders/common.js";
+import { homeLoader } from "./loaders/home.js";
+import { sustainableLoader } from "./loaders/sustainable.js";
+import { plusSizeLoader } from "./loaders/plus-size.js";
+import { atheisureLoader } from "./loaders/atheisure.js";
 
-const footer = document.getElementById("footer");
-footer.innerHTML = Footer();
+commonLoader();
 
-const header = document.getElementById("header");
-header.innerHTML = Header();
+const path = window.location.pathname;
+const isHome = path === "/";
 
-const newArrivals = document.getElementById("new-arrivals");
-newArrivals.innerHTML = NewArrivals();
+// products
+const isSustainable = path.includes("sustainable");
+const isPlusSize = path.includes("plus-size");
+const isAtheisure = path.includes("atheisure");
+
+if (isHome) {
+  homeLoader();
+}
+
+if (isSustainable) {
+  sustainableLoader();
+}
+
+if (isPlusSize) {
+  plusSizeLoader();
+}
+
+if (isAtheisure) {
+  atheisureLoader();
+}

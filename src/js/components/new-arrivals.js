@@ -1,22 +1,22 @@
 const arrivals = [
   {
-    name: "Comfort",
-    image: "./comfort.png",
+    name: "New Arrivals Comfort",
+    image: "./new-arrivals/comfort.png",
     href: "/comfort",
   },
   {
-    name: "Sustainable",
-    image: "./sustainable.png",
+    name: "New Arrivals Sustainable",
+    image: "./new-arrivals/sustainable.png",
     href: "/sustainable",
   },
   {
-    name: "Plus Size",
-    image: "./plus-size.png",
+    name: "New Arrivals Plus Size",
+    image: "./new-arrivals/plus-size.png",
     href: "/plus-size",
   },
   {
-    name: "Atheisure",
-    image: "./atheisure.png",
+    name: "New Arrivals Atheisure",
+    image: "./new-arrivals/atheisure.png",
     href: "/atheisure",
   },
 ];
@@ -26,7 +26,7 @@ const NewArrivalsSection = () => {
     .map(
       ({ name, image, href }) => /*html*/ `
     <div class="relative">
-      <img class="w-80 h-80" src="${image}" alt="${name}" />
+      <img class="w-auto h-96" src="${image}" alt="${name}" />
       <a href="${href}" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-1.5 px-3.5 bg-slate-600 rounded hover:bg-slate-500">
         <span class="text-white font-medium text-sm text-nowrap">${name}</span>
       </a>
@@ -37,7 +37,7 @@ const NewArrivalsSection = () => {
 
   return /*html*/ `
     <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto justify-center"
+        class="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto justify-center sm:justify-between"
     >
         ${newArrivalsCards}
     </div>
@@ -45,9 +45,9 @@ const NewArrivalsSection = () => {
 };
 
 export const NewArrivals = () => /*html*/ `
-<div class="p-6 sm:p-8">
+<div class="p-6 sm:p-8 sm:pb-16">
     <div class="mx-auto max-w-screen-xl flex flex-col justify-center">
-        <div class="flex flex-col gap-3 items-center pb-10">
+        <div class="flex flex-col gap-3 items-center pb-10 text-center">
             <span class="text-slate-600 font-semibold text-xl"
             >We made your everyday fashion to the next level</span
             >
