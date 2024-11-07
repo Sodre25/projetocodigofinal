@@ -18,9 +18,6 @@ export default {
           950: "#2e1065",
         },
       },
-      backgroundImage: {
-        "new-arrivals-comfort": "url('./new-arrivals-comfort.png')",
-      },
     },
   },
   plugins: [require("flowbite/plugin")],
