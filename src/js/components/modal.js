@@ -9,18 +9,18 @@ export const ModalProducInfo = ({ id, name, price, details, category }) => {
   <div class="relative p-4 w-full max-w-xl h-full md:h-auto">
     <!-- Modal content -->
     <div
-      class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5"
+      class="relative p-4 bg-white rounded-lg shadow  sm:p-5"
     >
       <!-- Modal header -->
       <div class="flex justify-between mb-4 rounded-t sm:mb-5">
-        <div class="text-lg text-gray-900 md:text-xl dark:text-white">
+        <div class="text-lg text-gray-900 md:text-xl ">
           <h3 class="font-semibold">${name}</h3>
           <p class="font-bold">${price}</p>
         </div>
         <div>
           <button
             type="button"
-            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex dark:hover:bg-gray-600 dark:hover:text-white"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex"
             data-modal-toggle="${id}"
           >
             <svg
@@ -42,22 +42,22 @@ export const ModalProducInfo = ({ id, name, price, details, category }) => {
       </div>
       <dl>
         <dt
-          class="mb-2 font-semibold leading-none text-gray-900 dark:text-white"
+          class="mb-2 font-semibold leading-none text-gray-900 "
         >
           Details
         </dt>
         <dd
-          class="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400"
+          class="mb-4 font-light text-gray-500 sm:mb-5 "
         >
           ${details}
         </dd>
         <dt
-          class="mb-2 font-semibold leading-none text-gray-900 dark:text-white"
+          class="mb-2 font-semibold leading-none text-gray-900 "
         >
           Category
         </dt>
         <dd
-          class="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400"
+          class="mb-4 font-light text-gray-500 sm:mb-5 "
         >
           ${category}
         </dd>
