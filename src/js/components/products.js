@@ -2,9 +2,10 @@ import { ModalProducInfo } from "./modal";
 
 export const ProductsSection = ({ products, category }) => {
   const productsCards = products
-    .map(({ name, image, href, price, sizes, details }, index) => {
+    .map(({ id, name, price, sizes, details, category }, index) => {
       const modalId = `readProductModal-${name}-${index}`;
       const buttonModalId = `readProductButton-${name}-${index}`;
+      const imageSrc = `/products/${id}.png`;
 
       return /*html*/ `
         <div
@@ -18,7 +19,7 @@ export const ProductsSection = ({ products, category }) => {
           >
             <img
               class="mx-auto h-full block"
-              src="${image}"
+              src="${imageSrc}"
               alt="${name}"
             />
           </a>
@@ -26,7 +27,6 @@ export const ProductsSection = ({ products, category }) => {
         <div class="pt-6">
           <div class="flex items-center justify-between gap-4">
           <a
-            href="${href}"
             class="text-lg font-semibold leading-tight text-gray-900 hover:underline "
             >${name}</a
           >
@@ -43,7 +43,7 @@ export const ProductsSection = ({ products, category }) => {
           <select id="size"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block p-2.5">
           
           ${sizes
-            .map((size, index) => {
+            .map((size) => {
               const sizeUpper = size.toUpperCase();
 
               return /*html*/ `

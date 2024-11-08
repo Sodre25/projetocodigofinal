@@ -26,7 +26,7 @@ const NewArrivalsSection = () => {
     .map(
       ({ name, image, href }) => /*html*/ `
     <div class="relative">
-      <img class="w-auto h-96" src="${image}" alt="${name}" />
+      <img class="w-96 h-auto" src="${image}" alt="${name}" />
       <a href="${href}" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-1.5 px-3.5 bg-slate-600 rounded hover:bg-slate-500">
         <span class="text-white font-medium text-sm text-nowrap">${name}</span>
       </a>
@@ -37,7 +37,7 @@ const NewArrivalsSection = () => {
 
   return /*html*/ `
     <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto justify-center sm:justify-between"
+        class="grid grid-cols-1 sm:grid-cols-2 gap-10 mx-auto justify-center sm:justify-between"
     >
         ${newArrivalsCards}
     </div>
