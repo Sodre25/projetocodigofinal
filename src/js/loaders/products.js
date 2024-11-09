@@ -1,7 +1,7 @@
 import { Hero } from "../components/hero";
 import { ProductsSection } from "../components/products";
-import { products } from "../mocks/data/products";
-import { store } from "../mocks/store";
+import { products } from "../data/products";
+import { store } from "../data/store";
 
 const extractProductFromForm = (form) => {
   const data = new FormData(form);

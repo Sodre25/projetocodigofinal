@@ -1,3 +1,5 @@
+import { formatPrice } from "../utils";
+
 export const ModalProducInfo = ({ id, name, price, details, category }) => {
   return /*html*/ `
   <div
@@ -15,7 +17,7 @@ export const ModalProducInfo = ({ id, name, price, details, category }) => {
       <div class="flex justify-between mb-4 rounded-t sm:mb-5">
         <div class="text-lg text-gray-900 md:text-xl ">
           <h3 class="font-semibold">${name}</h3>
-          <p class="font-bold">${price}</p>
+          <p class="font-bold">${formatPrice(price)}</p>
         </div>
         <div>
           <button

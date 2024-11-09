@@ -1,3 +1,4 @@
+import { formatPrice } from "../utils";
 import { ModalProducInfo } from "./modal";
 
 export const ProductsSection = ({ products }) => {
@@ -35,7 +36,7 @@ export const ProductsSection = ({ products }) => {
         </div>
         <div class="pt-6">
         <div class="mb-4 flex items-center justify-between gap-4">
-          <span class="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300 uppercase"> ${category} </span>
+          <span class="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 uppercase"> ${category} </span>
         </div>
         <div class="flex items-center justify-between gap-4">
           <a
@@ -45,7 +46,7 @@ export const ProductsSection = ({ products }) => {
           <p
           class="text-2xl font-extrabold leading-tight text-gray-900 "
         >
-          ${price}
+          ${formatPrice(price)}
         </p>
           </div>
     

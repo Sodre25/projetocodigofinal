@@ -1371,6 +1371,10 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
+.w-11 {
+  width: 2.75rem;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
