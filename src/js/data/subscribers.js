@@ -1,4 +1,5 @@
 import { CartItems } from "../components/cart-items";
+import { OrderSummary } from "../components/order-summary";
 import { store } from "./store";
 
 export const cartItemsCounterSubscriber = (cart) => {
@@ -59,5 +60,34 @@ export const renderCartItemsSubscriber = (cart) => {
 
       store.cart = [...store.cart];
     });
+  });
+};
+
+export const renderOrderSummarySubscriber = (cart) => {
+  const orderSummary = document.getElementById("order-summary");
+  if (!orderSummary) return;
+
+  const isCartPage = window.location.pathname.includes("cart");
+  const isCheckoutPage = window.location.pathname.includes("checkout");
+
+  let action = null;
+
+  if (isCartPage) {
+    action = {
+      page: "Checkout",
+      href: "/checkout",
+    };
+  }
+
+  if (isCheckoutPage) {
+    action = {
+      page: "Payment",
+      href: "/payment",
+    };
+  }
+
+  orderSummary.innerHTML = OrderSummary({
+    cart,
+    action,
   });
 };

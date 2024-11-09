@@ -27,7 +27,7 @@ const NewArrivalsSection = () => {
       ({ name, image, href }) => /*html*/ `
     <div class="relative">
       <img class="w-96 h-auto" src="${image}" alt="${name}" />
-      <a href="${href}" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-1.5 px-3.5 bg-slate-600 rounded hover:bg-slate-500">
+      <a href="${href}" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-1.5 px-3.5 bg-primary-600 rounded hover:bg-primary-500">
         <span class="text-white font-medium text-sm text-nowrap">${name}</span>
       </a>
     </div>

@@ -18,7 +18,7 @@ export const Header = () => /* html*/ `
         </div>
       </div>
 
-      <div class="px-4 py-1.5 bg-slate-600 sm:px-6">
+      <div class="px-4 py-1.5 bg-primary-700 sm:px-6">
         <div class="mx-auto max-w-screen-xl flex justify-center">
           <span class="text-white font-bold text-sm">
             50% off on your next purchase.

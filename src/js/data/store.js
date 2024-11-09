@@ -1,13 +1,18 @@
 import {
   cartItemsCounterSubscriber,
   renderCartItemsSubscriber,
+  renderOrderSummarySubscriber,
 } from "./subscribers";
 
 export const store = new Proxy(
   {
     cart: {
       value: JSON.parse(localStorage.getItem("cart")) || [],
-      subscribers: [cartItemsCounterSubscriber, renderCartItemsSubscriber],
+      subscribers: [
+        cartItemsCounterSubscriber,
+        renderCartItemsSubscriber,
+        renderOrderSummarySubscriber,
+      ],
     },
   },
   {
