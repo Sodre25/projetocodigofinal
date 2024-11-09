@@ -1,14 +1,27 @@
-export const store = new Proxy(
-  {
-    cart: [],
-    item: 0,
-  },
-  (value1, value2, value3) => {
-    console.log({ value1, value2, value3 });
-    return true;
-  }
-);
+import { cartItemsCounterSubscriber } from "./subscribers";
 
-console.log(store);
+export let store = null;
 
-store.item = 2;
+export const initStore = () => {
+  store = new Proxy(
+    {
+      cart: {
+        value: null,
+        subscribers: [cartItemsCounterSubscriber],
+      },
+    },
+    {
+      get(target, key) {
+        return target[key].value;
+      },
+      set(target, key, value) {
+        target[key].subscribers.forEach((subscriber) => subscriber(value));
+        target[key].value = value;
+        localStorage.setItem(key, JSON.stringify(value));
+        return true;
+      },
+    }
+  );
+
+  store.cart = JSON.parse(localStorage.getItem("cart")) || [];
+};

@@ -1,16 +1,25 @@
 import { ModalProducInfo } from "./modal";
 
-export const ProductsSection = ({ products, category }) => {
+export const ProductsSection = ({ products }) => {
   const productsCards = products
-    .map(({ id, name, price, sizes, details, category }, index) => {
+    .map((product, index) => {
+      const { id, name, price, sizes, details, category } = product;
       const modalId = `readProductModal-${name}-${index}`;
       const buttonModalId = `readProductButton-${name}-${index}`;
       const imageSrc = `/products/${id}.png`;
 
       return /*html*/ `
-        <div
+        <form
+        id="product-form-${id}"
         class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm "
       >
+      <div class="hidden">
+        <input type="hidden" name="id" value="${id}" />
+        <input type="hidden" name="name" value="${name}" />
+        <input type="hidden" name="price" value="${price}" />
+        <input type="hidden" name="details" value="${details}" />
+        <input type="hidden" name="category" value="${category}" />
+      </div>
         <div class="h-80 w-full">
           <a
             id="${buttonModalId}"
@@ -25,7 +34,10 @@ export const ProductsSection = ({ products, category }) => {
           </a>
         </div>
         <div class="pt-6">
-          <div class="flex items-center justify-between gap-4">
+        <div class="mb-4 flex items-center justify-between gap-4">
+          <span class="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300 uppercase"> ${category} </span>
+        </div>
+        <div class="flex items-center justify-between gap-4">
           <a
             class="text-lg font-semibold leading-tight text-gray-900 hover:underline "
             >${name}</a
@@ -40,7 +52,7 @@ export const ProductsSection = ({ products, category }) => {
           <div class="mt-4 flex items-center justify-between gap-4">
          
           <div>
-          <select id="size"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block p-2.5">
+          <select id="size" name="size"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block p-2.5">
           
           ${sizes
             .map((size) => {
@@ -53,10 +65,10 @@ export const ProductsSection = ({ products, category }) => {
             .join("")}
           </select>
       </div>
-            
     
             <button
-              type="button"
+              id="add-to-cart-button-${id}"
+              type="submit"
               class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
             >
               <svg
@@ -87,7 +99,7 @@ export const ProductsSection = ({ products, category }) => {
           details,
           category,
         })}
-      </div>
+      </form>
         `;
     })
     .join("");

@@ -6,6 +6,7 @@ import { checkoutLoader } from "./loaders/checkout.js";
 import { paymentLoader } from "./loaders/payment.js";
 import { productsLoader } from "./loaders/products.js";
 import { CATEGORIES } from "./constants.js";
+import { initStore } from "./mocks/store.js";
 
 commonLoader();
 
@@ -45,3 +46,5 @@ const isPayment = path.includes("payment");
 if (isPayment) {
   paymentLoader();
 }
+
+initStore();
