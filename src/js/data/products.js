@@ -14,7 +14,7 @@ export const products = [
     id: 2,
     category: CATEGORIES.SUSTAINABLE,
     name: "Set Anabella 2",
-    price: 1199,
+    price: 1399,
     sizes: ["xs", "s", "m", "l"],
     details: "some details cool",
   },
