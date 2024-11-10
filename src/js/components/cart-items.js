@@ -12,7 +12,7 @@ export const CartItems = ({ cart }) => {
     >
       <img
         class="h-20 w-auto"
-        src="/products/1.png"
+        src="/products/${id}.png"
         alt="imac image"
       />
 
