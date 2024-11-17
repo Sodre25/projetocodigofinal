@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "vite",
     "generate:css": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
-    "generate:css:dev": "npm run generate:css -- --watch",
-    "prebuild": "npm run generate:css -- --minify",
     "build": "vite build",
     "preview": "vite preview"
   },
