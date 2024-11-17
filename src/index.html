@@ -7,48 +7,290 @@
     <link href="./styles/output.css" rel="stylesheet" />
   </head>
   <body>
-    <header id="header"></header>
+    <header style="position: sticky;  top:0; z-index:100; background-color: #ffff;" id="header"></header>
     <main>
       <section>
-      <!-- essa section precisa centralizar a logo e o texto nao conseguir descer oconteudo -->
-      <div id="hero">
+      
+      <div id="hero" >
   <!-- Spline iframe para o fundo animado -->
+
   <iframe
   src="https://my.spline.design/fluidholographicliquid-b23167dee75d137a6cb4b7beb976353c"
   frameborder="0"
   width="200%"
-  height="600px"
+  height="800px"
   class="spline-iframe"
 ></iframe>
 
 <!-- Conteúdo sobreposto -->
-<div class="overlay text-center text-white">
-  <img
-    src="./public/logo.png"
-    alt="Logo"
-    class="logo-img"
-    width="200px"
-  />
 
-  <h1 id="text">
-    Dress to conquer. Your attitude ,our design.
-    <span class="text1"> 70% OFF </span>
-    on pieces that reflect your personal strength.
+<img style="margin-top: 60px;" class=" mx-auto max-w-screen-xl flex flex-col justify-center" src="./public/products/logo.png" alt=""> 
+  <h1 style="margin-top: 50px;text-align: center;" id="text">
+    Dress to express your essence 
   </h1>
 </div>
 </div>
 </section>
-</main>
-
-
-
+ <!-- primeira seção -->
 <section>
-      </div>
-      <div id="new-arrivals"></div>
+ 
+      <div  style="margin-top: 230px;" id="new-arrivals"></div>
     </section>
-    </main>
+
+
+
+
+ <!-- segunda seção -->
+ <section class="p-4 sm:p-6 lg:p-8 bg-gray-100">
+  <div class="mx-auto max-w-screen-xl">
+      <!-- Flex container para as duas colunas -->
+      <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
+          <!-- Container do Texto - Primeiro no mobile -->
+          <div class="w-full md:w-1/2 order-1 md:order-1">
+              <div class="p-6 text-center ">
+                  <h2 class="text-xl sm:text-2xl lg:text-3xl font-medium custom-shadow text-justify text-left" style="color:#524673; font-size: 2rem; color: #524673; font-size: 2rem; text-align: justify;">
+                        <span class="off-color text-2xl block" style="font-size: 2rem;color: #895e13; 
+                         ">40% OFF</span> on fitness outfit sets!
+                       
+                      In our journey to improve everyday.
+                  </h2>
+                
+              </div>
+          </div>
+
+          <!-- Container da Imagem -->
+          <div class="w-full md:w-1/2 order-2 md:order-2">
+              <div class="relative">
+                  <img
+                      src="./public/products/image 36.png"
+                      alt="Product Image"
+                      class="w-full h-64 sm:h-80 lg:h-[600px] object-cover shadow-lg "
+                     
+                  />
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+ 
+
+
+
+    <!-- segundo texto -->
+    <section>
+
+      
+     </section>
+
+     <section class="relative w-full">
+      <!-- Imagem de fundo ocupando toda a tela -->
+      <div class="absolute inset-0 w-full h-full"    >
+        <h3 class="text-2xl lg:text-2xl font-bold;
+        text-[#524673];" style="margin-top: -100px;text-align: center;font-size:1.5rem;color:#524673; font-weight:800; margin-bottom:150px;box-shadow: 0px 4px 8px rgba(82, 70, 115, 0.4);
+        padding: 30px;">  <span class="desconto" style="font-size: 1.5rem;color:#895e13; font-weight:700;">20% OFF</span> ON SETS, ENJOY</h3>
+        <img
+          src="./public/products/background3.png"
+          alt="Background Pattern"
+          class="w-full h-[150%] object-cover opacity-"
+          style=""
+        />
+      </div>
+    
+      <!-- Conteúdo sobreposto -->
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Imagem principal -->
+        <img
+          src="./public/products/33.png"
+          alt="Fitness Woman"
+          class="w-1/3 h-40 z-20 relative mx-auto sm:mt-[-300px] md:mt-[-400px] lg:mt-[-600px]"
+          style="margin-top: 80px; margin-bottom: 40px; padding:20px ;"
+        />
+    
+     <!-- Texto embaixo da imagem -->
+        <div>
+         <h3 class="text-4xl lg:text-3xl font-bold;
+        text-[#524673];" style="margin-top: -70px;text-align: right;font-size:1.5rem;color:#524673; font-weight:800; padding: 20px; padding-bottom: 10px; " >COMPLETE YOUR LOOK NOVEMBER <span class="desconto" style="font-size: 1.5rem;color:#895e13; font-weight:700;">OFF 20%</span></h3>
+        </div>
+      </div>
+    
+      <!-- Próximo contêiner com o background continuando -->
+    
+    </section>
+    
+    <!-- 3 Imagens -->
+    <div class="p-6 sm:p-8 sm:pb-16">
+      <div class="mx-auto max-w-screen-xl flex flex-col justify-center">
+        <div class="flex flex-col gap-3 items-center pb-10 text-center">
+          <!-- Container das imagens -->
+          <div class="flex flex-col md:flex-row justify-center items-center gap-3 w-full">
+            <!-- Imagem 1 -->
+            <div class="relative group">
+              <img
+                src="./public/products/37.png"
+                alt="Product 1"
+                class="w-[100px] h-[100px] object-cover shadow-lg transition-transform duration-500 group-hover:scale-105"
+                style="width: 80%;"
+              />
+            </div>
+    
+            <!-- Imagem 2 -->
+            <div class="relative group">
+              <img
+                src="./public/products/37.png"
+                alt="Product 2"
+                class="w-[200px] h-[200px] object-cover shadow-lg transition-transform duration-500 group-hover:scale-110"
+                style="width: 80%;"
+              />
+            </div>
+    
+            <!-- Imagem 3 -->
+            <div class="relative group">
+              <img
+                src="./public/products/37.png"
+                alt="Product 3"
+                class="w-[200px] h-[200px] object-cover shadow-lg transition-transform duration-500 group-hover:scale-115"
+                style="width: 80%; "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      /* Animação 3 Imagens */
+      .group img {
+        transform: scale(1);
+        transition: transform 0.5s ease-in-out;
+      }
+     .group:hover img {
+        transform: scale(1.1); 
+      }
+      .group img {
+        cursor: pointer;
+        will-change: transform;
+      }
+      </style>
+
+
+
+
+
+<section class="p-6 sm:p-8 sm:pb-16">
+  <!-- Background -->
+  <div class="relative h-auto">
+    <img
+      src="./public/products/background5.png"
+      alt="Background"
+      class="w-full h-full object-cover"
+    />
+    <div class="mx-auto max-w-screen-xl flex flex-col justify-center">
+      <!-- Container de Imagens -->
+      <div class="flex flex-col md:flex-row justify-center items-center gap-3 w-full">
+        <!-- Imagem 1 -->
+        <div class="relative group">
+          <img
+            src="./public/products/45.png"
+            alt="Product 1"
+            class="w-full max-w-[150px] md:max-w-[200px] lg:max-w-[250px] object-cover  shadow-lg  hover:brightness-125"
+            style="width: 80%;height: 80%;"
+          />
+        </div>
+
+        <!-- Imagem 2 (Imagem do Meio com Popup) -->
+        <div class="relative group">
+          <img
+            src="./public/products/44.png"
+            alt="Product 2"
+            class="w-full max-w-[150px] md:max-w-[200px] lg:max-w-[250px] object-cover shadow-lg "
+            style="width: 80%;height: 80%;"
+          />
+          <!-- Botão para abrir o popup -->
+          <button
+            class="absolute inset-0 flex justify-center items-center bg-[#8955DD] bg-opacity-80 text-white text-sm sm:text-lg px-4 py-2 rounded-lg hover:bg-[#6d44b1] transition  "
+            id="open-popup "
+          >
+            Subscribe & Get 10% Off!
+            
+          </button>
+        </div>
+
+        <!-- Imagem 3 -->
+        <div class="relative group">
+          <img
+            src="./public/products/43.png"
+            alt="Product 3"
+            class="w-full max-w-[150px] md:max-w-[200px] lg:max-w-[250px] object-cover  shadow-lg    "
+            style="width: 80%;height: 80%;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup -->
+<div
+  class="popup-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50"
+  id="popup"
+>
+  <div class="popup-content bg-white rounded-lg p-6 max-w-md w-full text-center shadow-lg relative ">
+    <button
+      class="close-popup absolute top-2 right-2 bg-[#8955DD] text-white p-2 rounded-full hover:bg-[#6d44b1] transition "
+      id="close-popup"
+    >
+      ✕
+    </button >
+    <h3 class="text-2xl font-bold text-[#524673] mb-4">Subscribe to our Newsletter</h3>
+    <p class="text-lg text-gray-700 mb-6">
+      Be the first to know about our latest collections and exclusive discounts!
+    </p>
+    <form>
+      <input
+        type="email"
+        placeholder="Enter your email"
+        class="w-full p-3 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#8955DD]"
+      />
+      <button
+        type="submit"
+        class="bg-[#8955DD] text-white py-2 px-6 rounded-lg hover:bg-[#6d44b1] transition w-full"
+      >
+        Subscribe Now
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Referências aos elementos
+  const openPopup = document.querySelector('#open-popup');
+  const popup = document.querySelector('#popup');
+  const closePopup = document.querySelector('#close-popup');
+
+  // Abrir o popup
+  openPopup.addEventListener('click', () => {
+    popup.classList.remove('hidden');
+  });
+
+  // Fechar o popup
+  closePopup.addEventListener('click', () => {
+    popup.classList.add('hidden');
+  });
+
+  // Fechar ao clicar fora do conteúdo
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      popup.classList.add('hidden');
+    }
+  });
+</script>
+
+
+
+
+
+  
+  </main>
     <footer id="footer"></footer>
     <script src="./js/main.js" type="module"></script>
-  
-  </body>
+</body>
 </html>
