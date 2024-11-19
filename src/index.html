@@ -36,53 +36,46 @@
  <!-- primeira seção -->
 <section>
  
-      <div  style="margin-top: 230px;" id="new-arrivals"></div>
+      <div  style="margin-top: 230px;" id="new-arrivals">
+      <STYle>
+        
+      </STYle>  
+      </div>
     </section>
 
 
 
 
- <!-- segunda seção -->
- <section class="p-4 sm:p-6 lg:p-8 bg-gray-100">
-  <div class="mx-auto max-w-screen-xl">
-      <!-- Flex container para as duas colunas -->
-      <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
-          <!-- Container do Texto - Primeiro no mobile -->
-          <div class="w-full md:w-1/2 order-1 md:order-1">
-              <div class="p-6 text-center ">
-                  <h2 class="text-xl sm:text-2xl lg:text-3xl font-medium custom-shadow text-justify text-left" style="color:#524673; font-size: 2rem; color: #524673; font-size: 2rem; text-align: justify;">
-                        <span class="off-color text-2xl block" style="font-size: 2rem;color: #895e13; 
-                         ">40% OFF</span> on fitness outfit sets!
-                       
-                      In our journey to improve everyday.
-                  </h2>
-                
-              </div>
-          </div>
 
-          <!-- Container da Imagem -->
-          <div class="w-full md:w-1/2 order-2 md:order-2">
-              <div class="relative">
-                  <img
-                      src="./public/products/32.1.png"
-                      alt="Product Image"
-                      class="w-full h-64 sm:h-80 lg:h-[600px] object-cover shadow-lg "
-                     
-                  />
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
  
 
 
 
     <!-- segundo texto -->
-    <section>
-
-      
-     </section>
+    <section class="p-4 sm:p-6 lg:p-8 bg-gray-100">
+      <div class="mx-auto max-w-screen-xl">
+        <!-- Flex container para as imagens -->
+        <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-center md:items-stretch justify-between">
+          <!-- Imagem 1 -->
+          <div class="flex-1">
+            <img
+              src="./public/products/32.3.png"
+              alt="Product Image 1"
+              class="w-full h-auto max-h-[600px] object-cover shadow-lg"
+            />
+          </div>
+    
+          <!-- Imagem 2 -->
+          <div class="flex-1">
+            <img
+              src="./public/products/32.1.png"
+              alt="Product Image 2"
+              class="w-full h-auto max-h-[600px] object-cover shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
      <section class="relative w-full">
       <!-- Imagem de fundo ocupando toda a tela -->
@@ -122,17 +115,18 @@
     <!-- 3 Imagens -->
     <div class="p-6 sm:p-8 sm:pb-16">
       <div class="mx-auto max-w-screen-xl flex flex-col justify-center">
-        <div class="flex flex-col gap-3 items-center pb-10 text-center">
+        <div class="flex flex-col gap-6 items-center pb-10 text-center">
           <!-- Container das imagens -->
-          <div class="flex flex-col md:flex-row justify-center items-center gap-3 w-full ">
+          <div class="flex flex-col md:flex-row justify-center items-center gap-6 w-full">
             <!-- Imagem 1 -->
             <div class="relative group">
               <img
                 src="./public/products/image 22_text7.png"
                 alt="Product 1"
-                class="object-cover shadow-lg transition-transform duration-500 group-hover:scale-105"
-                style="width: 80%;" height="50%"
+                class="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[450px] h-auto object-cover shadow-lg transition-transform duration-500 group-hover:scale-105"
               />
+              <!-- Efeito de Destaque -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#00000080] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
     
             <!-- Imagem 2 -->
@@ -140,9 +134,10 @@
               <img
                 src="./public/products/image_rosa.png"
                 alt="Product 2"
-                class=" object-cover shadow-lg transition-transform duration-500 group-hover:scale-110"
-                style="width: 80%;"
+                class="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[450px] h-auto object-cover shadow-lg transition-transform duration-500 group-hover:scale-110"
               />
+              <!-- Efeito de Destaque -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#00000080] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
     
             <!-- Imagem 3 -->
@@ -150,14 +145,16 @@
               <img
                 src="./public/products/image 37_text10.png"
                 alt="Product 3"
-                class=" object-cover shadow-lg transition-transform duration-500 group-hover:scale-115"
-                style="width: 80%; "
+                class="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[450px] h-auto object-cover shadow-lg transition-transform duration-500 group-hover:scale-115"
               />
+              <!-- Efeito de Destaque -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#00000080] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
     <style>
       /* Animação 3 Imagens */
       .group img {
